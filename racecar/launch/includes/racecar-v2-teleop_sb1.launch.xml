@@ -31,9 +31,12 @@
   <include file="$(find rplidar_ros)/launch/rplidar_racecar.launch" /> 
 
   <!-- start safety controller  -->
-  <include file="$(find racecar_safety_controller)/launch/safety_controller.launch" /> 
+  <include file="$(find racecar_safety_controller)/launch/safety_controller.launch" />
 
   <!-- start potential field controller  -->
-  <include file="$(find racecar_potential_field_controller)/launch/node_shaun.launch" /> 
+  <!-- <include file="$(find racecar_potential_field_controller)/launch/node_shaun.launch" /> -->
+
+  <!-- start mowbot controller -->
+  <include file="$(find racecar_mowbot_v1_controller)/launch/mowbot_v1.launch" />
 
 </launch>
