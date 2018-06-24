@@ -39,4 +39,7 @@
   <!-- start mowbot controller -->
   <include file="$(find racecar_mowbot_v1_controller)/launch/mowbot_v1.launch" />
 
+    <!-- start hector_slam -->
+    <include file="$(find hector_slam_launch)/launch/mowbot_hector_slam_v2.launch" />
+
 </launch>
