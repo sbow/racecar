@@ -28,7 +28,10 @@
   <include file="$(find racecar)/launch/includes/$(arg racecar_version)/static_transforms.launch.xml" />
 
   <!-- start rplidar laser scanner -->
-  <include file="$(find rplidar_ros)/launch/rplidar_racecar.launch" /> 
+  <include file="$(find rplidar_ros)/launch/rplidar_racecar.launch" />
+
+  <!-- start hector_slam -->
+  <include file="$(find hector_slam_launch)/launch/mowbot_hector_slam_v2.launch" />
 
   <!-- start safety controller  -->
   <include file="$(find racecar_safety_controller)/launch/safety_controller.launch" />
@@ -39,7 +42,5 @@
   <!-- start mowbot controller -->
   <include file="$(find racecar_mowbot_v1_controller)/launch/mowbot_v1.launch" />
 
-    <!-- start hector_slam -->
-    <include file="$(find hector_slam_launch)/launch/mowbot_hector_slam_v2.launch" />
 
 </launch>
