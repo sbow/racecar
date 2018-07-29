@@ -5,7 +5,9 @@
 # tire diam - stock, unladen: 4.3 in / 0.109 m
 # distance / rev_wheel: 0.342 m / rev
 # speed_to_erpm_gain: 1/0.342* rev / m * m / s * 11.82 rev_electrical / rev_mech * 60 rpm / rps
-speed_to_erpm_gain: 2073
+# measured: 32.9 s = 2*pi*2.44 m @ 1ms command: 0.466 m/s, command: 1 m/s, gain: 2073, command 2073
+# corrected gain: 2073 command equals 0.466 m/s, gain for 1 m/s should be 1/0.466*2074 = 4449
+speed_to_erpm_gain: 4449
 speed_to_erpm_offset: 0.0
 
 tachometer_ticks_to_meters_gain: 0.00225
@@ -14,7 +16,7 @@ max_servo_speed: 2.2 # radians/second
 servo_smoother_rate: 75.0 # messages/sec
 
 # servo smoother - limits acceleration and smooths anything above limit
-max_acceleration: 4.0 # meters/second^2
+max_acceleration: 2.0 # meters/second^2
 throttle_smoother_rate: 75.0 # messages/sec
 
 # servo value (0 to 1) =  steering_angle_to_servo_gain * steering angle (radians) + steering_angle_to_servo_offset
