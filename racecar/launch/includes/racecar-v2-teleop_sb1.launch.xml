@@ -33,6 +33,9 @@
   <!-- start hector_slam -->
   <include file="$(find hector_slam_launch)/launch/mowbot_hector_slam_v2.launch" />
 
+  <!-- start mowbot_camera -->
+  <include file="$(find mowbot_camera)/launch/mowbot_camera.launch" />
+
   <!-- start safety controller  -->
   <include file="$(find racecar_safety_controller)/launch/safety_controller.launch" />
 
