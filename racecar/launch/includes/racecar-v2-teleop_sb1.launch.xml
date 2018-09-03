@@ -27,11 +27,17 @@
   <!-- static transforms, e.g. base_link to imu -->
   <include file="$(find racecar)/launch/includes/$(arg racecar_version)/static_transforms.launch.xml" />
 
+
+
   <!-- start rplidar laser scanner -->
   <include file="$(find rplidar_ros)/launch/rplidar_racecar.launch" />
 
+
   <!-- start hector_slam -->
   <include file="$(find hector_slam_launch)/launch/mowbot_hector_slam_v2.launch" />
+
+  <!-- start usb_camera -->
+  <include file="$(find usb_cam)/launch/mowbot_usb_cam.launch" />
 
   <!-- start mowbot_camera -->
   <include file="$(find mowbot_camera)/launch/mowbot_camera.launch" />
